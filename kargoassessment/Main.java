@@ -8,6 +8,15 @@ public class Main {
             System.out.print(x + " ");
         }
      
+        //call method to convert to String
+        String[] numStrings = convertToString(array);
+        
+        //display numbers once converted 
+        System.out.println();
+        System.out.print(String.join(", ", numStrings));
+    }
+
+    public static String[] convertToString(int[] array){
         //create a String[] 
         String[] numStrings = new String[array.length];
         String str;
@@ -54,13 +63,9 @@ public class Main {
                         break;
                 }
             }
-        //add the numbers as as strings to String array
-        numStrings[j] = strBuilder.toString();
-       
-        }
-        //display numbers once converted 
-        System.out.println();
-        System.out.print(String.join(", ", numStrings));
+            //add the numbers as as strings to String array
+            numStrings[j] = strBuilder.toString();
+        } 
+        return numStrings;
     }
-
 }
